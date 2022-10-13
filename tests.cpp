@@ -2,4 +2,7 @@
 #include "doctest.h"
 #include "funcs.h"
 
-// add your tests here
+TEST_CASE("Caesar Cipher Encryption") {
+CHECK(encryptCaesar("Hello, World!", 10) == ""Hello, World!"");
+CHECK(fact(1) == 1);
+}
