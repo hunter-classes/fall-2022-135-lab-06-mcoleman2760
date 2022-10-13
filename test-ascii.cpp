@@ -3,9 +3,9 @@
 
 int main() {
   std::string a = ""; 
-  std::cout << "Input: ";
+  std::cout << "Input: " ;
   getline(std::cin, a);
-    std::cout << "Your line was: " << a << std::endl;
+std::cout << std::endl;   
  
   for (int i = 0 ; i < a.length(); i++){
      
