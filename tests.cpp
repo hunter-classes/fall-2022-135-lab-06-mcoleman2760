@@ -15,7 +15,8 @@ CHECK(encryptVigenere("Hello, World!","cake") == "Jevpq, Wyvnd!");
 CHECK(encryptVigenere("I am safe!","dog") == "O da ydtk!");  
 }
 TEST_CASE("Decryption"){
-
+CHECK(decryptCaesar("Rovvy, Gybvn!", 10) == "Hello, World!")
+CHECK(decryptVigenere("Jevpq, Wyvnd!", "cake") == "Hello, World!")
   }
 
 
