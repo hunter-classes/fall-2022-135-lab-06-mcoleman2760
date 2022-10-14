@@ -3,20 +3,24 @@
 
 
 char shiftChar(char c, int rshift){
-char a = c;
-  
-  for (int i = 0; i < rshift; i++){
-    a += 1;
-    if(c >= 'A' && c <= 'Z' && a > 'Z' ){
-      a = 'A';  
-    }
-    if(c >= 'a' && c <= 'z' && a > 'z' ){
-      a = 'a';  
-    } 
-  } 
-    
-    return a;
+char temp = tolower(c);
+    int raw = ((int)temp - 97 + rshift);
+    raw += 26;
+    raw =  raw % 26;
+    raw += 97;
+    temp = (char)raw;
 
+    if((int)c >= 65 && (int)c <= 90){ 
+        temp = toupper(temp);
+        return temp;
+    }
+
+    if((int)c >= 97 && (int)c <= 122){ 
+        return temp;
+    }
+    else{
+        return c;
+    }
 }
 
 std::string encryptCaesar(std::string plaintext, int rshift){
